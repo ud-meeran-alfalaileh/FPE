@@ -1,35 +1,26 @@
 import 'dart:io';
-
 void main() {
   while (true) {
-    // Get user input for the first number
     stdout.write("Enter the first number: ");
-    double firstNumber = double.parse(stdin.readLineSync()!);
-
-    // Get user input for the operator
+    double firstNum = double.parse(stdin.readLineSync()!);    // firstnum
     stdout.write("Enter an operator (+, -, *, /): ");
-    String operator = stdin.readLineSync()!;
-
-    // Get user input for the second number
+    String operator = stdin.readLineSync()!;    //operator
     stdout.write("Enter the second number: ");
-    double secondNumber = double.parse(stdin.readLineSync()!);
-
+    double secondNum = double.parse(stdin.readLineSync()!);   // secondNum
     double result;
-
-    // Perform the calculation based on the operator
     switch (operator) {
       case '+':
-        result = firstNumber + secondNumber;
+        result = firstNum + secondNum;
         break;
       case '-':
-        result = firstNumber - secondNumber;
+        result = firstNum - secondNum;
         break;
       case '*':
-        result = firstNumber * secondNumber;
+        result = firstNum * secondNum;
         break;
       case '/':
-        if (secondNumber != 0) {
-          result = firstNumber / secondNumber;
+        if (secondNum != 0) {
+          result = firstNum / secondNum;
         } else {
           print("Error: Division by zero is not allowed.");
           continue;
@@ -39,17 +30,6 @@ void main() {
         print("Invalid operator. Please use +, -, *, or /.");
         continue;
     }
-
-    // Display the result
-    print("Result: $firstNumber $operator $secondNumber = $result");
-
-    // Ask the user if they want to perform another calculation
-    stdout.write("Do you want to perform another calculation? (yes/no): ");
-    String continueCalculation = stdin.readLineSync()!.toLowerCase();
-    if (continueCalculation != "yes") {
-      break;
-    }
+    print("Result: $firstNum $operator $secondNum = $result");
   }
-
-  print("Thank you for using the Basic Calculator!");
 }
