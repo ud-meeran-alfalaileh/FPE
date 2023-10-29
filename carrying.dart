@@ -1,14 +1,22 @@
-double Function(double) calculateTriangleArea(double base) {
-  return (double height) {
-    return (base * height) / 2;
+Function curry(Function fun) {
+  return (var firstNum) {
+    return (var secondNum) {
+      return fun(firstNum, secondNum);
+    };
   };
 }
 
-void main() {
-  final calculateTriangle = calculateTriangleArea(6);
-  final area1 = calculateTriangle(4);
-  final area2 = calculateTriangle(5);
+int sum(int firstNum, int secondNum) {
+  return firstNum + secondNum;
+}
 
-  print('area1 is $area1');
-  print('area2 is $area2');
+void main() {
+  var curriedSum = curry(sum);
+
+  var add2 = curriedSum(2);
+  var add5 = curriedSum(5);
+  print(curriedSum);
+
+  print("Sum 2 to 3: ${add2(3)}");
+  print("Sum 5 to 7: ${add5(7)}");
 }
