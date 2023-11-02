@@ -1,11 +1,11 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tasks_flutter/constant/app_constant.dart';
-import 'package:tasks_flutter/constant/colors_const.dart';
-import 'package:tasks_flutter/view/form_view/register_page.dart';
-import 'package:tasks_flutter/widget/custome_widget/button_widget.dart';
-import 'package:tasks_flutter/widget/text_widget/intro_texr.dart';
+import 'package:tasks_flutter/src/constant/app_constant.dart';
+import 'package:tasks_flutter/src/constant/colors_const.dart';
+import 'package:tasks_flutter/src/form_view/register_page.dart';
+import 'package:tasks_flutter/src/widget/custome_widget/button_widget.dart';
+import 'package:tasks_flutter/src/widget/text_widget/intro_texr.dart';
 
 class IntroductionScreens extends StatefulWidget {
   const IntroductionScreens({super.key});

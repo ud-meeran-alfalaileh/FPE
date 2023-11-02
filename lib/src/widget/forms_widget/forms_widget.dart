@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tasks_flutter/model/froms_model.dart';
+import 'package:tasks_flutter/src/model/froms_model.dart';
 
 // ignore: must_be_immutable
 class FormWidget extends StatefulWidget {

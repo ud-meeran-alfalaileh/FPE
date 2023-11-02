@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tasks_flutter/intro_page.dart';
+import 'package:tasks_flutter/src/intro_page.dart';
 
 void main() {
   runApp(const MyApp());
