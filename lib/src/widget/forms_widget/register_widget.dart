@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tasks_flutter/src/model/froms_model.dart';
 import 'package:tasks_flutter/src/widget/custome_widget/button_widget.dart';
 import 'package:tasks_flutter/src/widget/forms_widget/forms_widget.dart';
+import 'package:tasks_flutter/src/widget/navbar_widget.dart/navbar_widget.dart';
 import 'package:tasks_flutter/src/widget/text_widget/form_text.dart';
 
 class RegisterWidget extends StatelessWidget {
@@ -84,7 +86,11 @@ class RegisterWidget extends StatelessWidget {
               const SizedBox(
                 height: 50,
               ),
-              Button(onTap: () {}, title: "Continue"),
+              Button(
+                  onTap: () {
+                    Get.to(const NavBarWidget());
+                  },
+                  title: "Continue"),
               const SizedBox(
                 height: 20,
               ),

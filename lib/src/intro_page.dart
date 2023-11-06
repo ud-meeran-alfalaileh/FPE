@@ -3,18 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tasks_flutter/src/constant/app_constant.dart';
 import 'package:tasks_flutter/src/constant/colors_const.dart';
-import 'package:tasks_flutter/src/form_view/register_page.dart';
+import 'package:tasks_flutter/src/view/form_view/register_page.dart';
 import 'package:tasks_flutter/src/widget/custome_widget/button_widget.dart';
 import 'package:tasks_flutter/src/widget/text_widget/intro_texr.dart';
 
-class IntroductionScreens extends StatefulWidget {
-  const IntroductionScreens({super.key});
+class IntroScreen extends StatefulWidget {
+  const IntroScreen({super.key});
 
   @override
-  State<IntroductionScreens> createState() => _IntroductionScreensState();
+  State<IntroScreen> createState() => _IntroScreenState();
 }
 
-class _IntroductionScreensState extends State<IntroductionScreens> {
+class _IntroScreenState extends State<IntroScreen> {
   RxInt currentIndex = 0.obs;
 
   @override
