@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tasks_flutter/src/model/froms_model.dart';
 import 'package:tasks_flutter/src/widget/custome_widget/button_widget.dart';
-import 'package:tasks_flutter/src/widget/forms_widget/forms_widget.dart';
-import 'package:tasks_flutter/src/widget/navbar_widget.dart/navbar_widget.dart';
+import 'package:tasks_flutter/src/widget/pages_widget/forms_widget/forms_widget.dart';
+import 'package:tasks_flutter/src/widget/pages_widget/navbar_widget.dart/navbar_widget.dart';
 import 'package:tasks_flutter/src/widget/text_widget/form_text.dart';
 
 class RegisterWidget extends StatelessWidget {

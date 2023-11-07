@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasks_flutter/src/constant/colors_const.dart';
-import 'package:tasks_flutter/src/widget/navbar_widget.dart/home_widget.dart';
+import 'package:tasks_flutter/src/widget/pages_widget/navbar_widget.dart/home_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

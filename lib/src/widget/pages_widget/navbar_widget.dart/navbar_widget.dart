@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tasks_flutter/src/constant/colors_const.dart';
-import 'package:tasks_flutter/src/view/vanbar_page/home_page.dart';
+import 'package:tasks_flutter/src/view/navbar_page/home_page.dart';
 
 class NavBarWidget extends StatefulWidget {
   const NavBarWidget({super.key});
