@@ -33,7 +33,7 @@ class _IntroScreenState extends State<IntroScreen> {
               height: 120,
             ),
             CarouselSlider(
-              items: AppConstant.image,
+              items: AppConstant.splachImage,
               options: CarouselOptions(
                 enlargeCenterPage: true,
                 autoPlay: true,
@@ -48,8 +48,8 @@ class _IntroScreenState extends State<IntroScreen> {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: AppConstant.image.map((item) {
-                int index = AppConstant.image.indexOf(item);
+              children: AppConstant.splachImage.map((item) {
+                int index = AppConstant.splachImage.indexOf(item);
                 return Container(
                   width: 8.0,
                   height: 8.0,

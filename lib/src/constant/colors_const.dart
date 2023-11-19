@@ -7,4 +7,5 @@ class ColorConstants {
   static Color blackTextColor = const Color.fromARGB(255, 0, 0, 0);
   static Color? borderColor = Colors.grey[200];
   static Color couponColor = const Color(0xff4B3298);
+  static Color dividerColor = const Color(0xffFEECE2);
 }

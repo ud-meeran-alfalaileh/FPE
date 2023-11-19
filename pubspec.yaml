@@ -40,6 +40,8 @@ dependencies:
   carousel_indicator: ^1.0.6
   get: ^4.6.6
   flutter_svg: ^2.0.7
+  flutter_screenutil: ^5.9.0
+
 
 
 dev_dependencies:

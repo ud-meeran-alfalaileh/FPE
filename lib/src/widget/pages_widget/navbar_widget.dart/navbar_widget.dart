@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tasks_flutter/src/constant/colors_const.dart';
+import 'package:tasks_flutter/src/view/navbar_page/details_page.dart';
 import 'package:tasks_flutter/src/view/navbar_page/home_page.dart';
+import 'package:tasks_flutter/src/view/navbar_page/profile_page.dart';
 
 class NavBarWidget extends StatefulWidget {
   const NavBarWidget({super.key});
@@ -13,28 +16,26 @@ class NavBarWidget extends StatefulWidget {
 class _NavBarWidgetState extends State<NavBarWidget> {
   final List<Widget> widgetList = const [
     HomePage(),
-    Text("dddd"),
+    DetailPage(),
     Scaffold(),
-    Scaffold(),
+    ProfilePage(),
   ];
-  int selectedIndex = 0;
+  RxInt selectedIndex = 0.obs;
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
+        child: Obx(() => Scaffold(
             body: Center(
-              child: widgetList[selectedIndex],
+              child: widgetList[selectedIndex.value],
             ),
             bottomNavigationBar: BottomNavigationBar(
                 selectedItemColor: ColorConstants.mainTextColor,
                 unselectedItemColor: ColorConstants.subTextColor,
                 onTap: (value) {
-                  setState(() {
-                    selectedIndex = value;
-                  });
+                  selectedIndex.value = value;
                 },
-                currentIndex: selectedIndex,
+                currentIndex: selectedIndex.value,
                 items: const [
                   BottomNavigationBarItem(
                     icon: Icon(
@@ -60,6 +61,6 @@ class _NavBarWidgetState extends State<NavBarWidget> {
                     ),
                     label: "",
                   ),
-                ])));
+                ]))));
   }
 }

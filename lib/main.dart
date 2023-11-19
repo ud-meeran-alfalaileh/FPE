@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:tasks_flutter/src/constant/colors_const.dart';
 import 'package:tasks_flutter/src/intro_page.dart';
 
 void main() {
@@ -9,19 +11,24 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xffFF7643),
-        ),
-        useMaterial3: true,
-      ),
-      home: const IntroScreen(),
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      splitScreenMode: true,
+      minTextAdapt: true,
+      builder: (context, child) {
+        return GetMaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(
+                seedColor: ColorConstants.mainScaffoldBackgroundColor),
+            useMaterial3: true,
+          ),
+          home: const IntroScreen(),
+        );
+      },
     );
   }
 }

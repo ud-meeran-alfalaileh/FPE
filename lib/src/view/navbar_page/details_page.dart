@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tasks_flutter/src/constant/colors_const.dart';
 
-import '../../widget/pages_widget/product_widget/detail.widget.dart';
+import '../../widget/pages_widget/navbar_widget.dart/detail_widget.dart';
 
 class DetailPage extends StatelessWidget {
   const DetailPage({super.key});
@@ -11,7 +11,7 @@ class DetailPage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: ColorConstants.mainScaffoldBackgroundColor,
-        body: const DetailWidget(),
+        body: DetailWidget(),
       ),
     );
   }

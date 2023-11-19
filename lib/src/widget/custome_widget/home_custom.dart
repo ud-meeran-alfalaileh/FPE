@@ -4,7 +4,7 @@ import 'package:tasks_flutter/src/constant/colors_const.dart';
 import 'package:tasks_flutter/src/model/container_model.dart';
 import 'package:tasks_flutter/src/widget/text_widget/home_text.dart';
 
-class HomePageWidgets {
+class HomeCustom {
   static searchBar() {
     return SizedBox(
       width: 220,
@@ -36,12 +36,22 @@ class HomePageWidgets {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            couponSecondText("A Summer Surpise"),
-            couponMainText("Cashback 20%")
+            HomeText.couponSecondText("A Summer Surpise"),
+            HomeText.couponMainText("Cashback 20%")
           ],
         ),
       ),
     );
+  }
+
+  static appImage(String title) {
+    return Container(
+        width: 70,
+        height: 70,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: ColorConstants.mainScaffoldBackgroundColor),
+        child: Image.asset(title));
   }
 
   static optionWidget({required ContainerModel container}) {
@@ -52,14 +62,14 @@ class HomePageWidgets {
           height: 60,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: Color(0xffFEECE2),
+            color: ColorConstants.dividerColor,
           ),
           child: Padding(
             padding: const EdgeInsets.all(18.0),
             child: SvgPicture.asset(container.image),
           ),
         ),
-        optionText(container.mainText!),
+        HomeText.optionText(container.mainText!),
       ],
     );
   }
@@ -94,8 +104,8 @@ class HomePageWidgets {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  couponMainText(container.mainText!),
-                  couponSecondText(container.subText!)
+                  HomeText.couponMainText(container.mainText!),
+                  HomeText.couponSecondText(container.subText!)
                 ],
               ),
             )
@@ -115,31 +125,25 @@ class HomePageWidgets {
             color: ColorConstants.borderColor,
             borderRadius: BorderRadius.circular(50),
           ),
-          child: SvgPicture.asset(container.image)),
+          child: Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: SvgPicture.asset(
+              container.image,
+            ),
+          )),
     );
   }
 
-  static productWidget({required ContainerModel container}) {
-    return GestureDetector(
-      onTap: container.onTap,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            width: 150,
-            height: 150,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: ColorConstants.borderColor),
-            child: Image.asset(
-              container.image,
-              width: 100,
-            ),
-          ),
-          productText(container.mainText),
-          priceText(container.subText)
-        ],
-      ),
+  static Row titleRow(String mainText, VoidCallback onTap) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        HomeText.homeMainText("Special for you"),
+        GestureDetector(
+          onTap: onTap,
+          child: HomeText.optionText("see more"),
+        ),
+      ],
     );
   }
 }
